@@ -4684,7 +4684,9 @@ ImGuiMouseCursor ImGui::GetMouseCursor()
 
 void ImGui::SetMouseCursor(ImGuiMouseCursor cursor_type)
 {
-    GImGui->MouseCursor = cursor_type;
+    if (GImGui) {
+        GImGui->MouseCursor = cursor_type;
+    }
 }
 
 void ImGui::CaptureKeyboardFromApp(bool capture)

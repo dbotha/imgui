@@ -299,7 +299,8 @@ static void ImGui_ImplSDL2_UpdateMouseCursor()
     {
         // Show OS mouse cursor
         SDL_SetCursor(g_MouseCursors[imgui_cursor] ? g_MouseCursors[imgui_cursor] : g_MouseCursors[ImGuiMouseCursor_Arrow]);
-        SDL_ShowCursor(SDL_TRUE);
+        // never show cursor in my games:
+        // SDL_ShowCursor(SDL_TRUE);
     }
 }
 
