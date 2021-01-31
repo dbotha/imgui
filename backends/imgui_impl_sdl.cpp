@@ -1,3 +1,5 @@
+#pragma warning(push)
+#pragma warning(disable : 4068) // MSVC suppress unknown clang/GCC pragma warn
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wextra-semi-stmt"
 #pragma clang diagnostic ignored "-Wimplicit-int-float-conversion"
@@ -374,3 +376,4 @@ void ImGui_ImplSDL2_NewFrame(SDL_Window* window)
     ImGui_ImplSDL2_UpdateGamepads();
 }
 #pragma clang diagnostic pop
+#pragma warning(pop)

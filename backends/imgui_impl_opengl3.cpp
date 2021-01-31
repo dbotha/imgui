@@ -1,3 +1,5 @@
+#pragma warning(push)
+#pragma warning(disable : 4068) // MSVC suppress unknown clang/GCC pragma warn
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wimplicit-int-float-conversion"
 #pragma clang diagnostic ignored "-Wsign-conversion"
@@ -722,3 +724,4 @@ void    ImGui_ImplOpenGL3_DestroyDeviceObjects()
     ImGui_ImplOpenGL3_DestroyFontsTexture();
 }
 #pragma clang diagnostic pop
+#pragma warning(pop)
