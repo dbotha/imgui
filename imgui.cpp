@@ -1,3 +1,5 @@
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdisabled-macro-expansion"
 // dear imgui, v1.81 WIP
 // (main code and documentation)
 
@@ -11175,3 +11177,4 @@ void ImGui::DebugNodeWindowsList(ImVector<ImGuiWindow*>*, const char*) {}
 //-----------------------------------------------------------------------------
 
 #endif // #ifndef IMGUI_DISABLE
+#pragma clang diagnostic pop

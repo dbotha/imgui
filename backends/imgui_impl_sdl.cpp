@@ -1,3 +1,8 @@
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wextra-semi-stmt"
+#pragma clang diagnostic ignored "-Wimplicit-int-float-conversion"
+#pragma clang diagnostic ignored "-Wall"
+#pragma clang diagnostic ignored "-Wpedantic"
 // dear imgui: Platform Backend for SDL2
 // This needs to be used along with a Renderer (e.g. DirectX11, OpenGL3, Vulkan..)
 // (Info: SDL2 is a cross-platform general purpose library for handling windows, inputs, graphics context creation, etc.)
@@ -48,8 +53,7 @@
 #include "imgui_impl_sdl.h"
 
 // SDL
-#include <SDL.h>
-#include <SDL_syswm.h>
+#include <nitro/SDL2.h>
 #if defined(__APPLE__)
 #include "TargetConditionals.h"
 #endif
@@ -368,3 +372,4 @@ void ImGui_ImplSDL2_NewFrame(SDL_Window* window)
     // Update game controllers (if enabled and available)
     ImGui_ImplSDL2_UpdateGamepads();
 }
+#pragma clang diagnostic pop
